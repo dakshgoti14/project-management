@@ -66,3 +66,46 @@
         background-color: #3b82f6;
     }
 }
+
+/* Design tokens and helper utilities */
+:root {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --muted: #6b7280;
+    --text: #111827;
+    --border: #e5e7eb;
+    --accent: #3b82f6;
+}
+
+.dark html {
+    --bg: #0b0b0c;
+    --surface: #0f1720;
+    --muted: #9ca3af;
+    --text: #f8fafc;
+    --border: #1f2937;
+    --accent: #60a5fa;
+}
+
+/* Fixed size helpers used across the app */
+.size-2 { width: 0.5rem; height: 0.5rem; }
+.size-3 { width: 0.75rem; height: 0.75rem; }
+.size-3\.5 { width: 0.875rem; height: 0.875rem; }
+.size-4 { width: 1rem; height: 1rem; }
+.size-5 { width: 1.25rem; height: 1.25rem; }
+.size-7 { width: 1.75rem; height: 1.75rem; }
+.size-8 { width: 2rem; height: 2rem; }
+.size-9 { width: 2.25rem; height: 2.25rem; }
+
+/* Sidebar width helper (used by component) */
+.min-w-68 { min-width: 17rem; width: 17rem; }
+
+/* Mobile overlay backdrop (shown when sidebar open) */
+.sidebar-backdrop { background-color: rgba(0,0,0,0.45); }
+
+/* Ensure smooth transform for the sidebar */
+.sidebar-transition { transition: transform 220ms cubic-bezier(.2,.8,.2,1), left 220ms; }
+
+/* Responsive adjustments for content padding */
+@media (max-width: 640px) {
+    .mobile-p-4 { padding: 1rem; }
+}

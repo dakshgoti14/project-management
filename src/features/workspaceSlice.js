@@ -3,7 +3,7 @@ import { dummyWorkspaces } from "../assets/assets";
 
 const initialState = {
     workspaces: dummyWorkspaces || [],
-    currentWorkspace: dummyWorkspaces[1],
+    currentWorkspace: dummyWorkspaces[0] || null,
     loading: false,
 };
 

@@ -16,6 +16,16 @@ const Layout = () => {
         dispatch(loadTheme())
     }, [])
 
+    // lock body scroll when sidebar open on small screens
+    useEffect(() => {
+        if (isSidebarOpen) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = ''
+        }
+        return () => { document.body.style.overflow = '' }
+    }, [isSidebarOpen])
+
     if (loading) return (
         <div className='flex items-center justify-center h-screen bg-white dark:bg-zinc-950'>
             <Loader2Icon className="size-7 text-blue-500 animate-spin" />
